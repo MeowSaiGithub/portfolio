@@ -55,7 +55,8 @@ markup:
 params:
   title: "MS Profile"
   description: Sai Aung Kaung Myat's Portfolio
-  # staticPath: ""  # The path to serve the static files from
+  # The path to serve the static files from
+  staticPath: "https://meowsaigithub.github.io/portfolio"  
   favicon: "fav.png"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
