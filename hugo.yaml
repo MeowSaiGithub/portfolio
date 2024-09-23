@@ -1,0 +1,412 @@
+baseURL: "https://hugo-profile.netlify.app"
+languageCode: "en-us"
+title: "MS Profile"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+#Menus:
+#  main:
+    #- identifier: blog
+    #  name: Blog
+    #  title: Blog posts
+    #  url: /blogs
+    #  weight: 1
+    #- identifier: gallery
+    #  name: Gallery
+    #  title: Blog posts
+    #  url: /gallery
+    #  weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "MS Profile"
+  description: Sai Aung Kaung Myat's Portfolio
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # When using hex codes for colors, quotations must be used along with the # sign
+  # color:
+  #   textColor: "#343a40"
+  #   secondaryTextColor: "#6c757d"
+  #   textLinkColor: "#007bff"
+  #   backgroundColor: "#eaedf0"
+  #   secondaryBackgroundColor: "#64ffda1a"
+  #   primaryColor: "#007bff"
+  #   secondaryColor: "#f8f9fa"
+
+  #   darkmode:
+  #     textColor: "#e4e6eb"
+  #     secondaryTextColor: "#b0b3b8"
+  #     textLinkColor: "#ffffff"
+  #     backgroundColor: "#18191a"
+  #     secondaryBackgroundColor: "#212529"
+  #     primaryColor: "#ffffff"
+  #     secondaryColor: "#212529"
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "MS Portfolio" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: true
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Sai Aung Kaung Myat."
+    subtitle: “Innovative Cloud Developer”
+    content: "As a cloud developer with extensive experience in Golang, Kubernetes, and modern web technologies, I am committed to building web applications that are both functional and aesthetically pleasing. My goal is to deliver solutions that enhance user experience and drive business success."
+    image: /images/hero.svg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Resume"
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/MeowSaiGithub
+#        - icon: fab fa-x-twitter
+#          url: https://example.com
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/sai-aung-kaung-myat-9b5095229/
+#      customIcons:
+#        - icon: /fav.png
+#          url: "https://example.com"
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.png"
+    content: |-
+      Experienced Go (Golang) Specialist Developer dedicated to crafting robust software solutions and cutting-edge architecture. Specialized in microservices and cloud-native applications, my goal is to elevate expertise, lead effective project management, and stay abreast of new technologies for designing innovative solutions.
+    
+    skills:
+      enable: true
+      title: "Here are a few technologies I've been working with recently:"
+      items:
+        - "Golang"
+        - "PostgreSQL"
+        - "Mongo"
+        - "AWS"
+        - "Docker"
+        - "Kubernetes"
+        - "Neo4j"
+        - "Gitlab CI/CD"
+        - "Redis"
+        - "Helm"
+        - "Message Queues"
+        - "Trivy"
+
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "Cloud Developer"
+        company: "Myanmar Software Integrated Solutions"
+        companyUrl: "https://myansis.com/"
+        date: "April 2024 - August 2024"
+        featuredLink:
+          enable: false
+          name: "View the project"
+          url: "https://example.com"
+        content: |
+          I worked as a Cloud/Devops Developer for MSIS Company in Yangon, Myanmar
+
+          - Introduced and containerized some of the Company's Project for faster deployment
+          - Set up a Gitlab CI/CD Pipeline for Company's Dev Teams.
+          - Maintained and monitored cloud servers.
+          - Identified and solved cloud issues requested by both internal and external users.
+          - Developed and automated some responsibilities
+        # content: |
+        #   I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+        #   - Lead backend developer for a product.
+        #   - Created a frontend design for a product.
+
+      - job: "Backend Developer"
+        company: "GoPedagogy Company"
+#        companyUrl: "https://example.com"
+        date: "April 2022 - Dec 2023"
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        # info:
+        #   enable: false
+        #   content: I worked as a software developer for more than one year in Amazon.
+        content: |
+          I worked as a backend developer specialized in Golang as a remote for a Singapore based company - Gopedagogy.
+
+          - Orchestrated the setup of a cluster infrastructure featuring proxy services and an API gateway.
+          - Developed essential back-end services for the core application.
+          - Conducted research on emerging technologies for future integration.
+          - Implemented a robust CI/CD pipeline in Gitlab to streamline development workflows.
+          - Deployed dashboards using AWS CloudFront for improved accessibility and performance.
+
+      - job: "Software Developer Intern"
+        company: "Galaxie AI Company Limited"
+        #companyUrl: "https://example.com"
+        date: "May 2021 - July 2021"
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        content: |
+          I worked as a remote intern for Galaxie AI Company.
+
+          - Installed and configured Eclipse Che Server to enhance the development environment for the company.
+          - Engineered a RESTful web service that leverages Terraform to dynamically provision EC2 instances on the Amazon Web Services (AWS) platform
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "B.Sc (Computing, Level 4)"
+        school:
+          name: "KBTC School of IT"
+        date: "2024 - 2024"
+      - title: "Bachelor of Computer Science"
+        school:
+          name: "University of Computer Studies, Mandalay"
+        date: "2015 - 2021"
+        # GPA: "3.8 out of 5.0"
+        # content: |-
+        #   Extracurricular Activities
+        #     - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        #     - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+
+        # GPA: "3.9 out of 5.0"
+      #   content: |-
+      #     I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
+      #     - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
+      #     - Face mask detection using a single convolutional neural network.
+
+      #     Extracurricular Activities
+      #       - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      #       - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+      #   featuredLink:
+      #     enable: true
+      #     name: "My academic record"
+      #     url: "https://example.com"
+      # - title: "High School"
+      #   school:
+      #     name: "Thomas Jefferson High School for Science and Technology."
+      #     url: "https://example.org"
+      #   GPA: "4.2 out of 5.0"
+      #   featuredLink:
+      #     enable: true
+      #     url: "https://example.com"
+
+  # Achievements
+  achievements:
+    enable: false
+    # title: "Custom Name"
+    items:
+      - title: Google kickstart runner
+        content: I solved all problems with optimal solution.
+        url: https://example.com
+        image: /images/achievment.jpg
+      - title: Facebook Hackathon Winner
+        content: Developed a product using Artificial Intelligence.
+        image: /images/achievment.jpg
+      - title: Hugo Profile
+        content: Developed a theme and getting 1K+ downloads per month.
+        url: "https://github.com/gurusabarish/hugo-profile"
+        image: /images/achievment.jpg
+      - title: Microsoft Imagine Runner
+        content: We are developed a product which can help others.
+      - title: Google Summer of Code
+        content: Contributed to a open source project.
+        url: https://example.com
+
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: CSGuard
+        content: csguard is a cli tool for calculating & validating checksum.
+        image: "golang-1.svg"
+        badges:
+          - "Golang"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/MeowSaiGithub/csguard
+
+      - title: GDHost
+        content: The GDHost is a middleware service that will allow user to upload and host application using docker.
+        image: "golang-1.svg"
+        badges:
+          - "Golang"
+          - "Docker"
+          - "Mongo"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/MeowSaiGithub/GDHost
+
+      - title: School Management System
+        image: "golang-1.svg"
+        content: |-
+          This project is a collection of micro-services with event-driven architecture. Some of Microservices worked on this project are Chat, Email, File, Domain, Posts, Notification, Authentication and Authorization services.
+        badges:
+          - "Golang"
+          - "Kubernetes"
+          - "Apache Kafak"
+          - "FCM"
+          - "AWS"
+          - "Mongo"
+          - "Gitlab CI/CD"
+          - "Postgres"
+      - title: TaskManager Telegram Bot
+        image: "golang-1.svg"
+        content: A simple telegram bot for tasks management.
+        badges:
+          - "Golang"
+          - "Mongo"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/MeowSaiGithub/telegram-taskmanager-bot
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    btnName: Mail me
+    btnLink: mailto:kaungmyatsakm@gmail.com
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+    #   messageRows: 5
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: false
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/MeowSaiGithub
+      linkedin: https://www.linkedin.com/in/sai-aung-kaung-myat-9b5095229/
+      # twitter: https://twitter.com
+      # instagram: https://instagram.com
+      # facebook: https://facebook.com
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
