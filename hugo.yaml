@@ -139,7 +139,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "#"
+      url: "https://rxresu.me/kaungmyatsakm/lonely-round-pheasant"
       download: true
       newPage: false
     socialLinks:
