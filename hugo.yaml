@@ -140,6 +140,7 @@ params:
       enable: true
       name: "Resume"
       url: "https://rxresu.me/kaungmyatsakm/lonely-round-pheasant"
+      
       download: true
       newPage: true
     socialLinks:
@@ -284,6 +285,14 @@ params:
     enable: true
     # title: "Custom Name"
     items:
+      - title: Dynamic Form Telegram Bot
+        content: A powerful Telegram bot that dynamically generates forms based on a provided JSON configuration. It supports storing responses in MySQL, PostgreSQL, or MongoDB and can send data via a webhook.
+        image: "golang-1.svg"
+        badges:
+          - "Golang"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/MeowSaiGithub/tg-form-builder
       - title: go-es
         content: A Full-Text Search Golang Microservice integrated with Elastic Search
         image: "golang-1.svg"
